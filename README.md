@@ -1,2 +1,4 @@
-# ai-tools
-Various tools for AI teaching
+# AI Tools for teaching
+
+This repo contains various useful tools that may be used in a typical AI course.
+

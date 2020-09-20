@@ -10,5 +10,5 @@ The one here is a port to stand-alone Java application done by Sebastian Sardina
 
 Check corresponding [README.md](value-iteration/README.md) for more details.
 
-![[]](value-iteration/screenshot.png)
+![[]](value_iteration/screenshot.png)
 

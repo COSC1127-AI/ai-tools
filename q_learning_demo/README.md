@@ -14,6 +14,9 @@ called [Q learning](https://en.wikipedia.org/wiki/Q-learning).
 	● States: Each cell is a state the agent can be.
 	● Actions: There are only 4 actions. Up, Down, Right, Left.
 
+![screenshot](screenshot.png)
+
+
 ## Dependencies
 
 - Python 3.

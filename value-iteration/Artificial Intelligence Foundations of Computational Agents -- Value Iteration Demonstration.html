@@ -1,0 +1,140 @@
+<!--?xml version="1.0" encoding="iso-8859-1"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Artificial Intelligence: Foundations of Computational Agents
+  -- Value Iteration Demonstration</title>
+  <meta name="generator" content="amaya 9.3, see http://www.w3.org/Amaya/">
+  <link rel="stylesheet" href="Artificial%20Intelligence%20Foundations%20of%20Computational%20Agents%20--%20Value%20Iteration%20Demonstration_files/styleDemos.html" type="text/css">
+<script type="text/javascript" async="" src="Artificial%20Intelligence%20Foundations%20of%20Computational%20Agents%20--%20Value%20Iteration%20Demonstration_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19416541-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<!-- wrap starts here -->
+<div id="wrap">
+
+	<!--header -->
+	<div id="header">
+		<h1 id="logo-text"><a href="https://www.cs.ubc.ca/~poole/index.html" title="">Artificial <br>Intelligence</a></h1>
+		<p id="logo-subtext">foundations of computational agents</p>
+	<!--header ends-->					
+	</div>
+		
+	<!-- navigation starts-->	
+	<div id="nav">
+		<ul>
+			<li><a href="https://www.cs.ubc.ca/~poole/index.html">Home</a></li>
+			<li><a href="https://www.cs.ubc.ca/~poole/html/ArtInt.html">Complete Book</a></li>
+			<li id="current"><a href="https://www.cs.ubc.ca/~poole/online.html">Resources</a></li>
+			<li><a href="https://www.cs.ubc.ca/~poole/slides/slides.html">Slides</a></li>
+		</ul>
+	<!-- navigation ends-->	
+	</div>					
+			
+	<!-- content starts -->
+	<div id="content">
+	
+		<div id="main">
+
+ <h1>Value Iteration</h1>
+ <applet code="VIgui.class" height="550" width="800">
+ Java is not working.  This has been tested in Firefox, and it works there!
+</applet>
+<p>This applet shows how value iteration works for a simple 10x10 grid
+world. The numbers in the bottom left of each square shows the value
+of the grid point. The blue arrows show the optimal action based on the
+current value function (when it
+looks like a star, all actions are optimal). To start, press "step".
+</p>
+<p>There are 4 actions available: up, down, left and
+right. If the agent carries out one of these actions, it have a 0.7
+chance of going one step in the desired
+direction and a 0.1 chance of going one step in any of the other three
+directions. If it bumps into the outside wall (i.e., the square
+computed as above is outside the grid), there is a penalty on 1 (i.e.,
+a reward of -1) and the agent doesn't
+actually move.
+</p>
+<p>In this example, there are four rewarding states (apart from the
+walls), one worth +10 (at position (9,8); 9 across and 8 down), one
+worth +3 (at position (8,3)), one
+worth -5 (at position (4,5)) and one -10 (at position (4,8)). In each
+if these states the agent gets the reward when
+it carries out an action in that state (when it leaves the state, not
+when it enters). You can see these when you press "step" once after a
+"reset". If "Absorbing states" is checked, the positive reward states
+are absorbing; the agent gets no more rewards after entering those
+states. If the box
+is not checked, when an agent reaches one of those states, no
+matter what it does at the next step, it is flung, at random,
+to one of the 4 corners of the grid world. [Does this make a
+difference? Try the non-discounted case (i.e., where discount=1.0).]
+</p>
+<p>The initial discount rate is 0.9. You can either type in a new
+number or increment or decrement it by 0.1. It is interesting to try
+the value iteration
+at different discount rates. Try 0.9, 0.8, 0.7, 0.6, (and 0.99,
+0.995 and 1.0 when there is an absorbing state). Look,
+in particular,
+at the policy for the points 2&amp;3-across and 6&amp;7-down, and
+around the +3 reward. Can you explain why the optimal policy changes as
+the value
+function is
+built? Can you explain the direction in the optimal policy for each
+discount rate?
+</p>
+<p>You can also change the initial value for each state (i.e, the value
+that value iteration
+starts with). See if changing this value affects the final value or the
+rate that we approach the final value.
+</p>
+<p>You can also change the contrast (the mapping
+between non-extreme values and colour); this is mainly for showing in
+classrooms where often we couldn't see the colour changes. You can also
+change the
+size of the grid (this makes most sense if you are using the applet
+viewer).
+</p>
+<p>
+This is the same domain that is used for the <a href="https://www.cs.ubc.ca/~poole/demos/rl/q.html">Q-learning applet</a>.
+
+</p>
+<hr>
+<p>You can get the code: <a href="https://www.cs.ubc.ca/~poole/demos/mdp/VIgui.java">VIgui.java</a> (which
+provides the GUI) and <a href="https://www.cs.ubc.ca/~poole/demos/mdp/VIcore.java">VIcore.java</a> (which
+actually does the value iteration), or the <a href="https://www.cs.ubc.ca/~poole/demos/mdp/index.html">javadoc</a>. This applet comes with
+ABSOLUTELY NO WARRANTY. This is free software, and you are welcome
+to redistribute it under certain conditions, see the code for more
+details.
+Copyright © <a href="http://www.cs.ubc.ca/spider/poole/">David
+Poole</a>, 2003-2007. All rights reserved.</p>
+		</div>
+
+	<!-- content ends-->	
+	</div>
+		
+	<!-- footer starts -->		
+	<div id="footer">						
+		<p>	Copyright © 2006-2010, <a href="http://cs.ubc.ca/~poole/">David Poole</a> and 
+  			<a href="http://cs.ubc.ca/~mack/">Alan Mackworth</a>
+   		</p>	
+	<!-- footer ends-->
+	</div>
+
+<!-- wrap ends here -->
+</div>
+
+
+</body></html>

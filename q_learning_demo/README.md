@@ -35,6 +35,8 @@ The challenge for this video is to:
 
 **Bonus points if you modify the bot in some way that makes it more efficient**
 
+A nice extension to the challenge can be found [here](https://github.com/erilyth/Q-Learning-on-Mazes).
+
 ## Credits
 
 The credits for this code go to [PhillipeMorere](https://github.com/PhilippeMorere). I've merely created a wrapper to get people started.

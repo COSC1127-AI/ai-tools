@@ -1,6 +1,6 @@
 # Value Iteration Applet
 
-This is David Poole's applet for running Value Itearation on a grid.
+This is David Poole's applet for running Value Iteration on a grid.
 
 The original web-based applet can be found [here](https://www.cs.ubc.ca/~poole/demos/mdp/vi.html) but Java applets are deprecated so this is a refactored version as a stand-alone Java application.
 
@@ -31,4 +31,5 @@ You can also change the initial value for each state (i.e, the value that value 
 You can also change the contrast (the mapping between non-extreme values and colour); this is mainly for showing in classrooms where often we couldn't see the colour changes. You can also change the size of the grid (this makes most sense if you are using the applet viewer). 
 
 
+![[]](screenshot.png)
 

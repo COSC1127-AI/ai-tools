@@ -1,6 +1,6 @@
 # AI Tools for teaching
 
-This repo contains various useful tools that may be used in a typical AI course.
+This repo contains various tools that can be used in AI courses.
 
 ## Value Iteration Grid
 
